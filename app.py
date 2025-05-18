@@ -12,4 +12,9 @@ def hello_world():
     global_head =  request.headers
     return retval
 
+@app.route("/api/internal/<path:text>")
+def internal(text):
+    global global_head
+    global_head = request.headers
+    return "test"
 
